@@ -1,0 +1,15 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <PackageId>Freelancer.OrchardCore</PackageId>
+        <Title>Freelancer Theme for Orchard Core</Title>
+        <Description>One page Bootstrap portfolio theme for freelancers based on Start Bootstrap template.</Description>
+        <PackageTags>Freelancer;OrchardCore</PackageTags>
+        <VersionPrefix>1.0.0</VersionPrefix>
+        <VersionSuffix>beta2</VersionSuffix>
+    </PropertyGroup>
+
+    <!-- Called after so that the <VersionSuffix> is built after the local ones -->
+    <Import Project="Common.props"/>
+
+</Project>

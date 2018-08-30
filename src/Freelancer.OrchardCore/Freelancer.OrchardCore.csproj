@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.0.0-beta2-67581" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.0.0-beta2-67581" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-beta2-67581" />
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-beta2-67581" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="wwwroot\gulpfile.js" />
+    <EmbeddedResource Remove="wwwroot\index.html" />
+    <EmbeddedResource Remove="wwwroot\LICENSE" />
+    <EmbeddedResource Remove="wwwroot\package.json" />
+    <EmbeddedResource Remove="wwwroot\README.md" />
+  </ItemGroup>
+
+</Project>

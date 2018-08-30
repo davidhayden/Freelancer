@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{ Site.Culture }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% render_section "HeadMeta", required: false %}
+    <title>{% page_title Site.SiteName, position: "before", separator: " - " %}</title>
+    <link href="/FreelancerTheme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/FreelancerTheme/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+    <link href="/FreelancerTheme/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+    <link href="/FreelancerTheme/css/freelancer.min.css" rel="stylesheet">
+    {% resources type: "Meta" %}
+    {% resources type: "HeadLink" %}
+    {% resources type: "Stylesheet" %}
+    {% resources type: "HeadScript" %}
+</head>
+<body id="page-top">
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/#page-top">{{ Site.SiteName }}</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button"
+                data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        {% shape "menu", alias: "alias:main-menu", cache_id: "main-menu", cache_duration: "00:05:00", cache_tag: "alias:main-menu" %}
+    </div>
+</nav>
+{% if Request.Path != '/' %}
+<section class="mt-5">
+    <div class="container">
+        {% render_section "Content", required: false %}
+    </div>
+</section>
+{% else %}
+{% render_section "Content", required: false %}
+{%  endif %}
+<footer class="footer text-center">
+    <div class="container">
+        {% render_section "Footer", required: false %}
+    </div>
+</footer>
+<div class="copyright py-4 text-center text-white">
+    <div class="container">
+        {% render_section "Copyright", required: false %}
+    </div>
+</div>
+<div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+<script src="/FreelancerTheme/vendor/jquery/jquery.min.js"></script>
+<script src="/FreelancerTheme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/FreelancerTheme/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="/FreelancerTheme/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="/FreelancerTheme/js/jqBootstrapValidation.js"></script>
+<script src="/FreelancerTheme/js/contact_me.js"></script>
+<script src="/FreelancerTheme/js/freelancer.min.js"></script>
+{% resources type: "FootScript" %}
+</body>
+</html>
