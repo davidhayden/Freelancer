@@ -54,7 +54,7 @@
         "OrchardCore.Templates",
         "OrchardCore.Widgets",
         // Themes
-        "FreelancerTheme",
+        "Freelancer.OrchardCore",
         "TheAdmin",
         "SafeMode"
       ]
@@ -62,7 +62,7 @@
     {
       "name": "themes",
       "admin": "TheAdmin",
-      "site": "FreelancerTheme"
+      "site": "Freelancer.OrchardCore"
     },
     {
       "name": "settings",
