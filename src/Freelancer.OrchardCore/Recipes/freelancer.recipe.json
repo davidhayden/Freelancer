@@ -822,7 +822,7 @@
           "PublishedUtc": "[js: variables('now')]",
           "CreatedUtc": "[js: variables('now')]",
           "Owner": null,
-          "Author": "admin",
+          "Author": "[js: parameters('AdminUsername')]",
           "LandingPage": {
             "Name": {
               "Text": "Start Bootstrap"
@@ -855,7 +855,7 @@
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
-                "Author": "admin",
+                "Author": "[js: parameters('AdminUsername')]",
                 "Project": {
                   "Image": {
                     "Paths": [
@@ -880,7 +880,7 @@
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
-                "Author": "admin",
+                "Author": "[js: parameters('AdminUsername')]",
                 "Project": {
                   "Image": {
                     "Paths": [
@@ -905,7 +905,7 @@
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
-                "Author": "admin",
+                "Author": "[js: parameters('AdminUsername')]",
                 "Project": {
                   "Image": {
                     "Paths": [
@@ -930,7 +930,7 @@
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
-                "Author": "admin",
+                "Author": "[js: parameters('AdminUsername')]",
                 "Project": {
                   "Image": {
                     "Paths": [
@@ -955,7 +955,7 @@
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
-                "Author": "admin",
+                "Author": "[js: parameters('AdminUsername')]",
                 "Project": {
                   "Image": {
                     "Paths": [
@@ -980,7 +980,7 @@
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
-                "Author": "admin",
+                "Author": "[js: parameters('AdminUsername')]",
                 "Project": {
                   "Image": {
                     "Paths": [
@@ -1009,7 +1009,7 @@
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
-                "Author": "admin",
+                "Author": "[js: parameters('AdminUsername')]",
                 "HtmlBodyPart": {
                   "Html": "[file:text('Snippets/About.html')]"
                 },
@@ -1027,7 +1027,7 @@
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": null,
-                "Author": "admin",
+                "Author": "[js: parameters('AdminUsername')]",
                 "HtmlBodyPart": {
                   "Html": "[file:text('Snippets/Contact.html')]"
                 },
