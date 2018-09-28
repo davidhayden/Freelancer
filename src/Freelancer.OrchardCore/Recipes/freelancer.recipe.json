@@ -3,7 +3,7 @@
   "displayName": "Freelancer",
   "description": "Portfolio website for freelancers.",
   "author": "David Hayden",
-  "website": "http://www.davidhayden.me",
+  "website": "https://www.davidhayden.me",
   "version": "2.0",
   "issetuprecipe": true,
   "categories": [
@@ -20,7 +20,6 @@
       "name": "feature",
       "disable": [],
       "enable": [
-        // SaaS
         "OrchardCore.HomeRoute",
         "OrchardCore.Admin",
         "OrchardCore.Diagnostics",
@@ -33,7 +32,6 @@
         "OrchardCore.Settings",
         "OrchardCore.Themes",
         "OrchardCore.Users",
-        // Content Management
         "OrchardCore.Alias",
         "OrchardCore.Autoroute",
         "OrchardCore.Html",
@@ -56,7 +54,6 @@
         "OrchardCore.Title",
         "OrchardCore.Templates",
         "OrchardCore.Widgets",
-        // Themes
         "Freelancer.OrchardCore",
         "TheAdmin",
         "SafeMode"
@@ -86,68 +83,6 @@
       "name": "ContentDefinition",
       "ContentTypes": [
         {
-          "Name": "LiquidPage",
-          "DisplayName": "Liquid Page",
-          "Hidden": false,
-          "Settings": {
-            "Creatable": "True",
-            "Draftable": "True",
-            "Versionable": "True",
-            "Listable": "True",
-            "Securable": "False",
-            "Stereotype": null
-          },
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "LiquidPage",
-              "Name": "LiquidPage",
-              "Settings": {
-                "Position": "2"
-              }
-            },
-            {
-              "PartName": "AutoroutePart",
-              "Name": "AutoroutePart",
-              "Settings": {
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                },
-                "Pattern": "{{ ContentItem | display_text | slugify }}",
-                "AllowCustomPath": "True",
-                "ShowHomepageOption": "True",
-                "Position": "1"
-              }
-            },
-            {
-              "PartName": "LiquidPart",
-              "Name": "LiquidPart",
-              "Settings": {
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                },
-                "Position": "3"
-              }
-            },
-            {
-              "PartName": "TitlePart",
-              "Name": "TitlePart",
-              "Settings": {
-                "Position": "0"
-              }
-            }
-          ]
-        },
-        {
           "Name": "HtmlWidget",
           "DisplayName": "Html",
           "Settings": {
@@ -162,59 +97,6 @@
             {
               "PartName": "HtmlWidget",
               "Name": "HtmlWidget",
-              "Settings": {
-                "Position": "0"
-              }
-            }
-          ]
-        },
-        {
-          "Name": "Page",
-          "DisplayName": "Page",
-          "Settings": {
-            "Creatable": "True",
-            "Draftable": "True",
-            "Versionable": "True",
-            "Listable": "True",
-            "Securable": "True",
-            "Stereotype": null
-          },
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "Page",
-              "Name": "Page",
-              "Settings": {
-                "Position": "3"
-              }
-            },
-            {
-              "PartName": "AutoroutePart",
-              "Name": "AutoroutePart",
-              "Settings": {
-                "Position": "1",
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                },
-                "Pattern": "{{ ContentItem | display_text | slugify }}",
-                "AllowCustomPath": "True",
-                "ShowHomepageOption": "True"
-              }
-            },
-            {
-              "PartName": "FlowPart",
-              "Name": "FlowPart",
-              "Settings": {
-                "Position": "2"
-              }
-            },
-            {
-              "PartName": "TitlePart",
-              "Name": "TitlePart",
               "Settings": {
                 "Position": "0"
               }
@@ -362,76 +244,6 @@
           ]
         },
         {
-          "Name": "Container",
-          "DisplayName": "Container",
-          "Settings": {
-            "Creatable": "False",
-            "Draftable": "True",
-            "Versionable": "True",
-            "Listable": "False",
-            "Securable": "True",
-            "Stereotype": "Widget"
-          },
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "Container",
-              "Name": "Container",
-              "Settings": {
-                "Position": "0"
-              }
-            },
-            {
-              "PartName": "FlowPart",
-              "Name": "FlowPart",
-              "Settings": {
-                "Position": "1"
-              }
-            }
-          ]
-        },
-        {
-          "Name": "Blockquote",
-          "DisplayName": "Blockquote",
-          "Settings": {
-            "Creatable": "False",
-            "Draftable": "True",
-            "Versionable": "True",
-            "Listable": "False",
-            "Securable": "True",
-            "Stereotype": "Widget"
-          },
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "Blockquote",
-              "Name": "Blockquote",
-              "Settings": {
-                "Position": "0"
-              }
-            }
-          ]
-        },
-        {
-          "Name": "ImageWidget",
-          "DisplayName": "Image",
-          "Settings": {
-            "Creatable": "False",
-            "Draftable": "True",
-            "Versionable": "True",
-            "Listable": "False",
-            "Securable": "True",
-            "Stereotype": "Widget"
-          },
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "Image",
-              "Name": "Image",
-              "Settings": {
-                "Position": "0"
-              }
-            }
-          ]
-        },
-        {
           "Name": "LiquidWidget",
           "DisplayName": "Liquid",
           "Settings": {
@@ -446,55 +258,6 @@
             {
               "PartName": "LiquidPart",
               "Name": "LiquidPart",
-              "Settings": {
-                "Position": "0"
-              }
-            }
-          ]
-        },
-        {
-          "Name": "Image",
-          "DisplayName": "Image",
-          "Settings": {
-            "Creatable": "False",
-            "Draftable": "False",
-            "Versionable": "True",
-            "Listable": "False",
-            "Securable": "False",
-            "Stereotype": null
-          },
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "Image",
-              "Name": "Image",
-              "Settings": {
-                "Position": "0"
-              }
-            },
-            {
-              "PartName": "TitlePart",
-              "Name": "TitlePart",
-              "Settings": {
-                "Position": "0"
-              }
-            }
-          ]
-        },
-        {
-          "Name": "Paragraph",
-          "DisplayName": "Paragraph",
-          "Settings": {
-            "Creatable": "False",
-            "Draftable": "True",
-            "Versionable": "True",
-            "Listable": "False",
-            "Securable": "True",
-            "Stereotype": "Widget"
-          },
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "Paragraph",
-              "Name": "Paragraph",
               "Settings": {
                 "Position": "0"
               }
@@ -631,97 +394,6 @@
                   "Tokenized": false,
                   "Template": null
                 },
-                "Position": "0"
-              }
-            }
-          ]
-        },
-        {
-          "Name": "Blockquote",
-          "Settings": {},
-          "ContentPartFieldDefinitionRecords": [
-            {
-              "FieldName": "TextField",
-              "Name": "Quote",
-              "Settings": {
-                "DisplayName": "Quote",
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false
-                },
-                "Hint": null,
-                "Editor": "TextArea",
-                "Position": "0"
-              }
-            }
-          ]
-        },
-        {
-          "Name": "Image",
-          "Settings": {
-            "Attachable": true
-          },
-          "ContentPartFieldDefinitionRecords": [
-            {
-              "FieldName": "MediaField",
-              "Name": "Media",
-              "Settings": {
-                "DisplayName": "Image",
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false
-                },
-                "Hint": null,
-                "Editor": null,
-                "Position": "0",
-                "Multiple": false,
-                "Required": true
-              }
-            },
-            {
-              "FieldName": "TextField",
-              "Name": "Caption",
-              "Settings": {
-                "DisplayName": "Caption",
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false,
-                  "Template": null
-                },
-                "Hint": "A description of the image used as title or alternate text",
-                "Editor": null,
-                "Position": "1"
-              }
-            }
-          ]
-        },
-        {
-          "Name": "Paragraph",
-          "Settings": {},
-          "ContentPartFieldDefinitionRecords": [
-            {
-              "FieldName": "HtmlField",
-              "Name": "Content",
-              "Settings": {
-                "DisplayName": "Content",
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false
-                },
-                "Hint": null,
-                "Editor": "Wysiwyg",
                 "Position": "0"
               }
             }
