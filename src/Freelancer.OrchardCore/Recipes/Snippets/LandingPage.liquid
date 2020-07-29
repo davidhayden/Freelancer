@@ -1,59 +1,95 @@
 <header class="masthead bg-primary text-white text-center">
-    <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="{{ Model.ContentItem.Content.LandingPage.Photo.Paths.first | asset_url }}" alt="{{ Model.ContentItem.Content.LandingPage.Name.Text }}">
-        <h1 class="text-uppercase mb-0">{{ Model.ContentItem.Content.LandingPage.Name.Text }}</h1>
-        <hr class="star-light">
-        <h2 class="font-weight-light mb-0">{{ Model.ContentItem.Content.LandingPage.Tagline.Text }}</h2>
-    </div>
+	<div class="container d-flex align-items-center flex-column">
+		<!-- Masthead Avatar Image-->
+		<img class="masthead-avatar mb-5" src="{{ Model.ContentItem.Content.LandingPage.Photo.Paths.first | asset_url }}" alt="{{ Model.ContentItem.Content.LandingPage.Name.Text }}" />
+		<!-- Masthead Heading-->
+		<h1 class="masthead-heading text-uppercase mb-0">{{ Model.ContentItem.Content.LandingPage.Name.Text }}</h1>
+		<!-- Icon Divider-->
+		<div class="divider-custom divider-light">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon">
+				<i class="fas fa-star"></i>
+			</div>
+			<div class="divider-custom-line"></div>
+		</div>
+		<!-- Masthead Subheading-->
+		<p class="masthead-subheading font-weight-light mb-0">{{ Model.ContentItem.Content.LandingPage.Tagline.Text }}</p>
+	</div>
 </header>
 {% if Model.ContentItem.Content.Portfolio.ContentItems.size > 0 %}
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-            <hr class="star-dark mb-5">
+    <section class="page-section portfolio" id="portfolio">
+	    <div class="container">
+		    <!-- Portfolio Section Heading-->
+		    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+		    <!-- Icon Divider-->
+		    <div class="divider-custom">
+			    <div class="divider-custom-line"></div>
+			    <div class="divider-custom-icon">
+				    <i class="fas fa-star"></i>
+			    </div>
+			    <div class="divider-custom-line"></div>
+		    </div>
+		    <!-- Portfolio Grid Items-->
             <div class="row">
-                {% for project in Model.ContentItem.Content.Portfolio.ContentItems %}
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-{% increment id %}">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="{{ project.Project.Image.Paths.first | asset_url }}" alt="{{ project.TitlePart.Title }}">
-                        </a>
-                    </div>
+				{% for project in Model.ContentItem.Content.Portfolio.ContentItems %}
+				<div class="col-md-6 col-lg-4 mb-5">
+					<div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal{{ forloop.index }}">
+						<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white">
+								<i class="fas fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" src="{{ project.Project.Image.Paths.first | asset_url }}" alt="{{ project.TitlePart.Title }}" />
+					</div>
+				</div>
                 {% endfor %}
             </div>
         </div>
     </section>
 {% endif %}
 {% if Model.ContentItem.Content.Sections.ContentItems.size > 0 %}
-    {% for section in Model.ContentItem.Content.Sections.ContentItems %}
-        {{ section.HtmlBodyPart.Html | raw }}
-    {% endfor %}
+{% for section in Model.ContentItem.Content.Sections.ContentItems %}
+{{ section.HtmlBodyPart.Html | raw }}
+{% endfor %}
 {% endif %}
 {% if Model.ContentItem.Content.Portfolio.ContentItems.size > 0 %}
-    {% for project in Model.ContentItem.Content.Portfolio.ContentItems %}
-        <div class="portfolio-modal mfp-hide" id="portfolio-modal-{% increment modal %}">
-            <div class="portfolio-modal-dialog bg-white">
-                <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                    <i class="fa fa-3x fa-times"></i>
-                </a>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <h2 class="text-secondary text-uppercase mb-0">{{ project.TitlePart.Title }}</h2>
-                            <hr class="star-dark mb-5">
-                            <img class="img-fluid mb-5" src="{{ project.Project.Image.Paths.first | asset_url }}" alt="">
-                            <p class="mb-5">{{ project.HtmlBodyPart.Html }}</p>
-                            <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                                <i class="fa fa-close"></i>
-                                Close Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+	{% for project in Model.ContentItem.Content.Portfolio.ContentItems %}
+		<div class="portfolio-modal modal fade" id="portfolioModal{{ forloop.index }}" tabindex="-1" role="dialog" aria-labelledby="portfolioModal{{ forloop.index }}Label" aria-hidden="true">
+			<div class="modal-dialog modal-xl" role="document">
+				<div class="modal-content">
+					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							<i class="fas fa-times"></i>
+						</span>
+					</button>
+					<div class="modal-body text-center">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-lg-8">
+									<!-- Portfolio Modal - Title-->
+									<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal{{ forloop.index }}Label">{{ project.TitlePart.Title }}</h2>
+									<!-- Icon Divider-->
+									<div class="divider-custom">
+										<div class="divider-custom-line"></div>
+										<div class="divider-custom-icon">
+											<i class="fas fa-star"></i>
+										</div>
+										<div class="divider-custom-line"></div>
+									</div>
+									<!-- Portfolio Modal - Image-->
+									<img class="img-fluid rounded mb-5" src="{{ project.Project.Image.Paths.first | asset_url }}" alt="{{ project.TitlePart.Title }}" />
+									<!-- Portfolio Modal - Text-->
+									<p class="mb-5">{{ project.HtmlBodyPart.Html }}</p>
+									<button class="btn btn-primary" data-dismiss="modal">
+										<i class="fas fa-times fa-fw"></i>
+										Close Window
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
     {% endfor %}
 {% endif %}
