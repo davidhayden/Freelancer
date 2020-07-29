@@ -1,3 +1,9 @@
+skip_commits:
+  files:
+    - assets/*
+    - NuGet.config
+    - README.md
+
 image: Visual Studio 2019
 init:
   - git config --global core.autocrlf true
