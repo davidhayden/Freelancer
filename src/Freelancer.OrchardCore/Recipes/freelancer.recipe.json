@@ -440,8 +440,8 @@
       "name": "media",
       "Files": [
         {
-          "TargetPath": "img/profiles/profile.png",
-          "SourcePath": "../wwwroot/img/profiles/profile.png"
+          "TargetPath": "img/profiles/avataaars.svg",
+          "SourcePath": "../wwwroot/img/profiles/avataaars.svg"
         },
         {
           "TargetPath": "img/portfolio/cabin.png",
@@ -541,7 +541,7 @@
             },
             "Photo": {
               "Paths": [
-                "/img/profiles/profile.png"
+                "/img/profiles/avataaars.svg"
               ]
             }
           },
