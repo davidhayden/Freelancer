@@ -6,6 +6,13 @@ Custom theme for Orchard Core CMS based on the one page portfolio [Freelancer St
 
 [![Build status](https://ci.appveyor.com/api/projects/status/wc8dydpub9cnr72d?svg=true)](https://ci.appveyor.com/project/davidhayden/freelancer) [![Status](https://img.shields.io/myget/davidhayden-ci/v/Freelancer.OrchardCore.svg)](https://www.myget.org/feed/davidhayden-ci/package/nuget/Freelancer.OrchardCore)
 
+## Change Log
+
+- 2020-07-28 Update to Freelancer v6.0.4 on Startbootstrap
+- 2020-06-23 Update to Orchard Core CMS 1.0.0-rc2
+- 2019-08-10 Update to Orchard Core CMS 1.0.0-beta3
+- 2018-08-31 Initial Release
+
 ## Getting Started
 
 Add the NuGet package, **Freelancer.OrchardCore**, to the Orchard Core CMS Website. Launch the application and choose the _Freelancer_ Recipe from the Setup Page.
