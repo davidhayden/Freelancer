@@ -312,7 +312,8 @@
               "Name": "Name",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Name"
+                  "DisplayName": "Name",
+                  "Position": "0"
                 },
                 "ContentIndexSettings": {
                   "Included": false,
@@ -320,8 +321,7 @@
                   "Analyzed": false,
                   "Sanitized": false,
                   "Tokenized": false
-                },
-                "Position": "0"
+                }
               }
             },
             {
@@ -329,7 +329,8 @@
               "Name": "Tagline",
               "Settings": {
                 "ContentPartFieldSettings": {
-                  "DisplayName": "Tagline"
+                  "DisplayName": "Tagline",
+                  "Position": "1"
                 },
                 "ContentIndexSettings": {
                   "Included": false,
@@ -337,8 +338,7 @@
                   "Analyzed": false,
                   "Sanitized": false,
                   "Tokenized": false
-                },
-                "Position": "1"
+                }
               }
             },
             {
@@ -347,9 +347,11 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Photo",
-                  "Required": true,
-                  "Multiple": false,
                   "Position": "2"
+                },
+                "MediaFieldSettings": {
+                  "Required": true,
+                  "Multiple": false
                 },
                 "ContentIndexSettings": {
                   "Included": false,
@@ -372,9 +374,11 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Image",
-                  "Required": true,
-                  "Multiple": false,
                   "Position": "1"
+                },
+                "MediaFieldSettings": {
+                  "Required": true,
+                  "Multiple": false
                 },
                 "ContentIndexSettings": {
                   "Included": false,
@@ -398,29 +402,6 @@
                 "ContentPartFieldSettings": {
                   "DisplayName": "Content",
                   "Editor": "Multiline",
-                  "Position": "0"
-                },
-                "ContentIndexSettings": {
-                  "Included": false,
-                  "Stored": false,
-                  "Analyzed": false,
-                  "Sanitized": false,
-                  "Tokenized": false
-                }
-              }
-            }
-          ]
-        },
-        {
-          "Name": "MenuItem",
-          "Settings": {},
-          "ContentPartFieldDefinitionRecords": [
-            {
-              "FieldName": "TextField",
-              "Name": "Link",
-              "Settings": {
-                "ContentPartFieldSettings": {
-                  "DisplayName": "Link",
                   "Position": "0"
                 },
                 "ContentIndexSettings": {
